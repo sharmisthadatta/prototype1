@@ -1,0 +1,32 @@
+{
+  "name": "prototype",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "apollo-server-express": "^2.0.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql-tools": "^3.0.5",
+    "graphql-yoga": "^1.14.12",
+    "immutable": "^3.8.2",
+    "lodash": "^4.17.10",
+    "node-fetch": "^2.2.0",
+    "randomstring-promise": "0.0.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.4",
+    "react-table": "^6.8.6",
+    "redis": "^2.8.0",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
