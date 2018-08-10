@@ -12,7 +12,7 @@ const redis =require ('redis');
 
 
 
-client = redis.createClient();
+/*client = redis.createClient();
  client.on('connect', () => {
    console.log("connected to redis");
 });
@@ -20,7 +20,7 @@ client = redis.createClient();
 client.on("error", function (err) {
    console.log("Error " + err);
 });
-
+*/
 
 //var redis = require("redis"),
 
@@ -245,14 +245,14 @@ const resolvers = {
 
         }, 2000);
      })
-     client.set(author.crn,JSON.stringify.author);
-     client.get(author.crn,JSON.stringify.author);
+     //client.set(author.crn,JSON.stringify.author);
+     //client.get(author.crn,JSON.stringify.author);
           },
     place: fakeDelay2,
   },
   Query: {
     hello: (_, { name }) => `Hello ${name || "World"}`,
-    getPerson: async (_, { id },{client}) => {
+    getPerson: async (_, { id }) => {
       const response = await fetch(`https://swapi.co/api/people/${id}/`);
       //console.log(response);
       //client.get(response.data.getPerson.author.crn,JSON.stringify.response.data.getPerson.author);
@@ -271,7 +271,7 @@ app.use('*', cors({ origin: 'http://localhost:3000' }));
 app.use(cors(), bodyParser.json());
       app.use('/graphql', express_graphql({
           schema: schema,
-          context:{client},
+          
           tracing: true,
           cacheControl: true,
           graphiql: true
